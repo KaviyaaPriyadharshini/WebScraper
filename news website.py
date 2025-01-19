@@ -4,6 +4,7 @@ import pandas as pd
 import time
 import random
 
+
 class CNNNewsScraper:
     """
     A class to scrape news articles from CNN's website.
@@ -93,9 +94,39 @@ class CNNNewsScraper:
         df.to_csv(filename, index=False)
         print(f"Data saved to {filename}")
 
+    def display_news(self):
+        """Displays the scraped news in a structured format."""
+        print("\nScraped News Articles:")
+        for idx, title in enumerate(self.data["title"], start=1):
+            print(f"\nArticle {idx}:")
+            print(f"Title: {title}")
+            print(f"Date: {self.data['date'][idx - 1]}")
+            print(f"Summary: {self.data['summary'][idx - 1]}")
+            print(f"Content: {self.data['content'][idx - 1][:500]}...")  # Display first 500 characters of content
+            print(f"URL: {self.data['article_url'][idx - 1]}")
+
+
 if __name__ == "__main__":
     news_url = input("Enter the CNN news page URL to scrape: ")
     scraper = CNNNewsScraper(news_url)
+
     scraper.fetch_article_urls()
     scraper.scrape_all_articles()
-    scraper.save_to_csv()
+
+    while True:
+        print("\nOptions:")
+        print("1. Save scraped data to CSV")
+        print("2. Display scraped news in structured format")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            filename = input("Enter the filename to save data (default: cnn_news.csv): ") or "cnn_news.csv"
+            scraper.save_to_csv(filename)
+        elif choice == "2":
+            scraper.display_news()
+        elif choice == "3":
+            print("Exiting. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
