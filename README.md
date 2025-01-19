@@ -19,3 +19,8 @@ To run these scraping scripts, you will need Python 3.x installed along with the
 
 ```bash
 pip install requests beautifulsoup4 pandas
+
+## Amazon Scraper
+
+Run the cricket_score_scraper.py file by using the command:
+python cricket_score_scraper.py
