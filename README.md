@@ -18,8 +18,7 @@ This repository contains three Python-based web scraping tools designed to fetch
 To run these scraping scripts, you will need Python 3.x installed along with the necessary libraries. You can install the dependencies using `pip`:
 
 ```bash
-pip install requests beautifulsoup4 pandas
-
+pip install requests beautifulsoup4 pandas```
 ## Amazon Scraper
 
 Run the cricket_score_scraper.py file by using the command:
