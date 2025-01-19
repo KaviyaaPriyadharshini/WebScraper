@@ -6,20 +6,9 @@ This repository contains three Python-based web scraping tools designed to fetch
 2. **Cricket Score Scraper** - Fetches live cricket match scores and commentary.
 3. **CNN News Scraper** - Scrapes news articles from CNN's website.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Amazon Scraper](#amazon-scraper)
-  - [Cricket Score Scraper](#cricket-score-scraper)
-  - [CNN News Scraper](#cnn-news-scraper)
-
 ## Installation
 
 To run these scraping scripts, you will need Python 3.x installed along with the necessary libraries. You can install the dependencies using `pip`:
 
 ```bash
 pip install requests beautifulsoup4 pandas```
-## Amazon Scraper
-
-Run the cricket_score_scraper.py file by using the command:
-python cricket_score_scraper.py
