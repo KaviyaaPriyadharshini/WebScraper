@@ -12,8 +12,6 @@ This repository contains three Python-based web scraping tools designed to fetch
   - [Amazon Scraper](#amazon-scraper)
   - [Cricket Score Scraper](#cricket-score-scraper)
   - [CNN News Scraper](#cnn-news-scraper)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
